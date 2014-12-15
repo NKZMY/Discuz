@@ -1,0 +1,70 @@
+<div class="login">
+                    	<!--{if $_G['uid']}-->
+                        	<div class="useimg"><a class="avarimg" href="home.php?mod=space&uid=$_G[uid]"><!--{avatar($_G[uid],small)}--></a> <span style="margin-left:10px;" class="vwmy{if $_G['setting']['connect']['allow'] && $_G[member][conisbind]} qq{/if}"><a href="home.php?mod=space&uid=$_G[uid]" target="_blank" title="{lang visit_my_space}">{$_G[member][username]}</a></span></div>
+                            <span class="pipe">|</span>
+							<div class="useinfo"><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a></div>
+                            <span class="pipe">|</span>
+                            <div class="usetoggle">ÓÃ»§ÖÐÐÄ</div>
+                        	<ul class="subNav" style="display:none;">
+                                <!--{if $_G['group']['allowinvisible']}-->
+                                <li id="loginstatus">
+                                    <a id="loginstatusid" href="member.php?mod=switchstatus" title="{lang login_switch_invisible_mode}" onClick="ajaxget(this.href, 'loginstatus');return false;" class="xi2"></a>
+                                </li>
+                                <!--{/if}-->
+                                <!--{hook/global_usernav_extra1}-->
+                               <li><!--{hook/global_usernav_extra4}--><a href="home.php?mod=spacecp">{lang setup}</a></li>
+                               <li><a href="home.php?mod=space&do=pm" id="pm_ntc"{if $_G[member][newpm]} class="new"{/if}>{lang pm_center}</a></li>
+                               <li><a href="home.php?mod=space&do=notice" id="myprompt"{if $_G[member][newprompt]} class="new"{/if}>{lang remind}<!--{if $_G[member][newprompt]}-->($_G[member][newprompt])<!--{/if}--></a></li>
+                               <li><!--{if $_G['setting']['taskon'] && !empty($_G['cookie']['taskdoing_'.$_G['uid']])}--><a href="home.php?mod=task&item=doing" id="task_ntc" class="new">{lang task_doing}</a><!--{/if}--></li>
+                                <!--{if ($_G['group']['allowmanagearticle'] || $_G['group']['allowpostarticle'] || $_G['group']['allowdiy'] || getstatus($_G['member']['allowadmincp'], 4) || getstatus($_G['member']['allowadmincp'], 6) || getstatus($_G['member']['allowadmincp'], 2) || getstatus($_G['member']['allowadmincp'], 3))}-->
+                                   <li><a href="portal.php?mod=portalcp"><!--{if $_G['setting']['portalstatus'] }-->{lang portal_manage}<!--{else}-->{lang portal_block_manage}<!--{/if}--></a></li>
+                                <!--{/if}-->
+                                <!--{if $_G['uid'] && $_G['group']['radminid'] > 1}-->
+                                   <li><a href="forum.php?mod=modcp&fid=$_G[fid]" target="_blank">{lang forum_manager}</a></li>
+                                <!--{/if}-->
+                                <!--{if $_G['uid'] && $_G['adminid'] == 1 && $_G['setting']['cloud_status']}-->
+                                    <li><a href="admin.php?frames=yes&action=cloud&operation=applist" target="_blank">{lang cloudcp}</a></li>
+                                <!--{/if}-->
+                                <!--{if $_G['uid'] && getstatus($_G['member']['allowadmincp'], 1)}-->
+                                  <li><a href="admin.php" target="_blank">{lang admincp}</a></li>
+                                <!--{/if}-->
+                                <!--{hook/global_usernav_extra2}-->
+                            
+                                <!--{hook/global_usernav_extra3}-->
+                                <!--{eval $upgradecredit = $_G['uid'] && $_G['group']['grouptype'] == 'member' && $_G['group']['groupcreditslower'] != 999999999 ? $_G['group']['groupcreditslower'] - $_G['member']['credits'] : false;}-->
+                               <li> <a href="home.php?mod=spacecp&ac=credit&showcredit=1" id="extcreditmenu"{if !$_G[setting][bbclosed]} onMouseOver="delayShow(this, showCreditmenu);" class="showmenu"{/if}>{lang credits}: $_G[member][credits]</a></li>
+                               <li>{lang usergroup}: <a href="home.php?mod=spacecp&ac=usergroup"{if $upgradecredit !== 'false'} id="g_upmine" class="xi2" onMouseOver="delayShow(this, showUpgradeinfo)"{/if}>$_G[group][grouptitle]</a></li>
+
+                       		 <!--{elseif !empty($_G['cookie']['loginuser'])}-->
+                            <li><a id="loginuser" class="noborder"><!--{echo dhtmlspecialchars($_G['cookie']['loginuser'])}--></a></li>
+                            <li><a href="member.php?mod=logging&action=login" onClick="showWindow('login', this.href)">{lang activation}</a></li>
+                           	  <li><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a></li>
+                            </ul>
+                        <!--{elseif !empty($_G['cookie']['loginuser'])}-->
+                        <p>
+                            <strong><a id="loginuser" class="noborder"><!--{echo dhtmlspecialchars($_G['cookie']['loginuser'])}--></a></strong>
+                            <span class="pipe">|</span><a href="member.php?mod=logging&action=login" onClick="showWindow('login', this.href)">{lang activation}</a>
+                            <span class="pipe">|</span><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
+                        </p>
+                        <!--{elseif !$_G[connectguest]}-->
+                        	<span style="color:#fff; font-family:Î¢ÈíÑÅºÚ; font-size:13px; line-height:24px; font-weight:400;" >|</span>
+                            <a href="member.php?mod=logging&action=login" onClick="showWindow('login', this.href)" style="color:#fff; font-family:Î¢ÈíÑÅºÚ; font-size:13px; line-height:24px; font-weight:400;" >µÇÂ½</a>
+                            <span style="color:#fff; font-family:Î¢ÈíÑÅºÚ; font-size:13px; line-height:24px; font-weight:400;" >|</span>
+                            <a href="member.php?mod=register"  style="color:#fff; font-family:Î¢ÈíÑÅºÚ; font-size:13px; line-height:24px; font-weight:400;" >×¢²á</a>
+                            <span style="color:#fff; font-family:Î¢ÈíÑÅºÚ; font-size:13px; line-height:24px; font-weight:400;" >|</span>
+                        <!--{else}-->
+                        <div id="um">
+                            <div class="avt y"><!--{avatar(0,small)}--></div>
+                            <p>
+                                <strong class="vwmy qq">{$_G[member][username]}</strong>
+                                <!--{hook/global_usernav_extra1}-->
+                                <span class="pipe">|</span><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a>
+                            </p>
+                            <p>
+                                <a href="home.php?mod=spacecp&ac=credit&showcredit=1">{lang credits}: 0</a>
+                                <span class="pipe">|</span>{lang usergroup}: $_G[group][grouptitle]
+                            </p>
+                        </div>
+						<!--{/if}-->
+                    </div>
+<div class="search"><!--{subtemplate common/pubsearchform}--></div>

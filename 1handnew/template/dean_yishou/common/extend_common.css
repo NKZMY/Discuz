@@ -1,0 +1,53 @@
+
+.clear{clear:both;}
+body{ width:100%;background:#dddddd ;}
+.wp{width:100%; margin:0 auto;}
+.frame, .frame-tab{background:none;}
+/*顶部*/
+.top{ width:100%; height:44px; position:relative; background:#514343; margin:0 auto;border-bottom:solid red 3px;}
+	.download{ width:980px;margin-left:150px; position:relative; float:left;}
+		.download_text{width:60px; float:left; padding-top:17px; font-family:微软雅黑; font-size:12px; font-weight:400; color:white;}
+		.download_apple{width:24px; float:left; margin-left:24px; margin-top:10px; width:24px; height:24px; background:#fff;}
+		.download_android{width:24px; float:left; margin-left:24px; margin-top:10px; width:24px; height:24px; background:#fff;}
+		.download_wp{width:24px; float:left; margin-left:24px; margin-top:10px; width:24px; height:24px; background:#fff;}
+		.login_login{width:42px; hight: 12px; float:left;margin-left:596px; margin-top:17px;font-family:微软雅黑; font-size:12px; font-weight:400; 				color:white; border-right:solid white 1px;}
+		.register{float:left;margin-left:12px; padding-top:17px; font-family:微软雅黑; font-size:12px; font-weight:400; color:white;}
+		.login_sina{width:24px; float:left; margin-left:24px; margin-top:10px; width:24px; height:24px; background:#fff;}
+		.login_qq{width:24px; float:left; margin-left:24px; margin-top:10px; width:24px; height:24px; background:#fff;}
+/*头部*/
+.header{  height:170px; position:; background:url({STYLEIMGDIR}/headerbg.png) 0 0 no-repeat; margin:0 auto;}
+
+#hd .wp{padding-top:0;}
+	.columns{width:980px; margin-left:150px;padding-top:26px;}
+		.nav li{float:left;}
+			.nav li.homes{width:63px; height:61px; margin-left:33px; margin-top:-10px; margin-right:64px;}
+			.nav li.column{width:110px; height:110px; margin-right:32px; opacity:0.4; fliter:(alpha(opacity=40))}
+			#column_right{margin-right:0px;}
+			/*.nav li img:hover{opacity:0.8; fliter:(alpha(opacity=80));}*/
+	/*登录部分*/
+	.login{ position:absolute; left:46px; top:10px; width:230px;  font-family:微软雅黑; font-size:12px; font-weight:400;}
+		.login span.pipe{float:left; color:#fff; line-height:24px; display:block; padding:0 10px; margin:0; }
+		.useimg{ float:left;}
+		.useinfo{float:left; color:#fff; line-height:24px; font-family:微软雅黑; font-size:13px; font-weight:400;}
+			.useimg img{ width:24px; height:24px; border:1px solid #fff; box-shadow:1px 1px 2px #fff; border-radius:3px;}
+			.useimg a,.useimg span,.useinfo a{float:left; color:#fff; display:block; line-height:24px;  font-family:微软雅黑; font-size:12px; font-weight:400;}
+			.vwmy{background:none; padding:0;}
+			.usetoggle{float:left; color:#fff; line-height:24px; cursor:pointer; background:url({STYLEIMGDIR}/arrow.png) 55px 5px no-repeat; width:80px; }
+			.subNav{background:#004677; width:100px; float:right; padding:10px; padding-left:0;}
+				.subNav li{ display:block; clear:both; color:#fff; line-height:24px; text-align:right;}
+					.subNav li a{ color:#fff;}
+					#extcreditmenu{padding-left:0;}
+	/*搜索*/
+	.search{ position:absolute; right:45px; top:10px; width:167px; height:22px; background:url({STYLEIMGDIR}/searchbg.jpg) 0 0 no-repeat;}
+		#scbar{width:167px; height:22px;  background:none; border:0; }
+		#scbar_txt{ width:124px; _width:110px; float:left; background:none; border:0; font-size:12px; text-indent:10px; line-height:14px; color:#fff;}
+		#scbar_btn{width:40px; float:left;}
+	/*diy*/
+	.diybutton{position:absolute; right:0; top:10px;}
+/*底部*/
+#scrolltop{width:61px; height:62px; background:url({STYLEIMGDIR}/scrolltop.jpg) 0 0 no-repeat; padding-bottom:60px;}
+.footer{ height:116px; background:url({STYLEIMGDIR}/bottombg.jpg) 0 0 repeat-x; text-align:center; font-size:20px; color:#666;}
+	#ft{line-height:116px; border:0; padding:0; width:988px; margin:0 auto; text-align:center; padding-left:10px;}
+	
+/*内容页添加的背景样式*/
+

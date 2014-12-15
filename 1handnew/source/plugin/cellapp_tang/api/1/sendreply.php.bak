@@ -1,0 +1,101 @@
+<?php
+
+/**
+ *      [Discuz!] (C)2001-2099 Comsenz Inc.
+ *      This is NOT a freeware, use is subject to license terms
+ *
+ *      $Id: forumindex.php 27451 2012-02-01 05:48:47Z monkey $
+ */
+
+if(!defined('IN_MOBILE_API')) {
+	exit('Access Denied');
+}
+/*
+$sql = 'select a.aid,a.catid,a.bid,a.uid,a.username,a.title,a.highlight,a.author,a.from,a.fromurl,a.url,a.summary,'
+       .' a.pic,a.thumb,a.remote,a.id,a.idtype,a.contents,a.allowcomment,a.owncomment,a.click1,a.click2,a.click3,a.click4,'
+       .' a.click5,a.click6,a.click7,a.click8,a.tag,a.dateline,a.status,a.showinnernav,a.preaid,a.nextaid,a.htmlmade,a.htmlname,a.htmldir,'
+       .' b.viewnum,b.commentnum,b.favtimes,b.sharetimes,c.content '
+       .' from '.DB::table('portal_article_title').' as a left outer join '.DB::table('portal_article_count')
+       .' as b on a.aid=b.aid left outer join '.DB::table('portal_article_content').' as c on a.aid=c.aid where a.aid='.$_GET['aid'] 
+       .' order by a.dateline desc '; 
+
+   
+$query = DB::QUERY($sql);
+$data = array();
+			while($row = DB::fetch($query)) {
+				$data[] = cellapp_core::getvalues($row, array(
+				'aid', 'catid', 'bid', 'uid', 'username', 'title', 'highlight', 'author', 'from', 'fromurl',
+				 'url', 'summary', 'pic', 'thumb', 'remote', 'id', 'idtype', 'contents', 'allowcomment', 
+				 'owncomment', 'click1', 'click2', 'click3', 'click4', 'click5', 'click6', 'click7', 
+				 'click8', 'tag', 'dateline', 'status', 'showinnernav', 'preaid', 'nextaid', 'htmlmade',
+				  'htmlname', 'htmldir','viewnum','commentnum','favtimes','sharetimes','content'));
+		
+			}
+//读取相关文章
+$sql = 'select a.aid,a.catid,a.bid,a.uid,a.username,a.title,a.highlight,a.author,a.from,a.fromurl,a.url,a.summary,'
+       .' a.pic,a.thumb,a.remote,a.id,a.idtype,a.contents,a.allowcomment,a.owncomment,a.click1,a.click2,a.click3,a.click4,'
+       .' a.click5,a.click6,a.click7,a.click8,a.tag,a.dateline,a.status,a.showinnernav,a.preaid,a.nextaid,a.htmlmade,a.htmlname,a.htmldir,'
+       .' b.viewnum,b.commentnum,b.favtimes,b.sharetimes '
+       .' from '.DB::table('portal_article_title').' as a left outer join '.DB::table('portal_article_count')
+       .' as b on a.aid=b.aid left outer join '.DB::table('portal_article_related').' as c on a.aid=c.raid where c.aid='.$_GET['aid'] 
+       .' order by a.dateline desc '; 
+
+   
+$query = DB::QUERY($sql);
+$related = array();
+			while($row = DB::fetch($query)) {
+				$related[] = cellapp_core::getvalues($row, array(
+				'aid', 'catid', 'bid', 'uid', 'username', 'title', 'highlight', 'author', 'from', 'fromurl',
+				 'url', 'summary', 'pic', 'thumb', 'remote', 'id', 'idtype', 'contents', 'allowcomment', 
+				 'owncomment', 'click1', 'click2', 'click3', 'click4', 'click5', 'click6', 'click7', 
+				 'click8', 'tag', 'dateline', 'status', 'showinnernav', 'preaid', 'nextaid', 'htmlmade',
+				  'htmlname', 'htmldir','viewnum','commentnum','favtimes','sharetimes','content'));
+		
+			}
+//下面读取前5个评论
+$sql = 'select a.id,a.uid,a.cid,a.idtype,a.postip,a.dateline,a.status,a.message,'
+       .' b.username '
+       .' from '.DB::table('portal_comment').' as a left outer join '.DB::table('ucenter_members')
+       .' as b on a.uid=b.uid where a.id='.$_GET['aid'] 
+       .' order by a.dateline desc limit 0,5 '; 
+
+echo $sql;    
+   
+$query = DB::QUERY($sql);
+$comment = array();
+			while($row = DB::fetch($query)) {
+				$comment[] = cellapp_core::getvalues($row, array(
+				'id', 'uid', 'cid', 'idtype', 'postip', 'dateline', 'status', 'message', 'username'));
+		
+			}
+	*/		
+/*			
+    $bouns1 = 50;
+		if(!$_G['uid']) {
+			  //如果没有用户登陆直接返回列表
+        $message='';
+		}else {
+			  //判断用户是否获得阅读奖励
+			$row = C::t('#cellapp#1hand_user_login')->fetch_all_by_uid($_G['uid']);
+		  if (count($row)>0){
+			
+    }
+    
+    */
+    //准备
+    $arr=array();
+    $arr['uid'] = $_G['uid'];
+    $arr['message'] = $_POST['message'];
+    $arr['lastlogin'] =  date("Y-m-d H:i:s");
+    $arr['contiunelogin'] = 1;
+    $bouns=$bouns1;
+		//C::t('#cellapp#1hand_user_login')->insert($arr);
+		  $messsage = $_POST['message'];    
+		 $variable = array(
+				'data' => $data,
+				'comment' => $comment,
+				'related' => $related,
+				'message' => $message		);
+    cellapp_core::result(cellapp_core::variable($variable));
+    
+?>

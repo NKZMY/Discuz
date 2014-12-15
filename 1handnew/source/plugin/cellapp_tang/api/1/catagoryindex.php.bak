@@ -1,0 +1,33 @@
+<?php
+
+/**
+ *      [Discuz!] (C)2001-2099 Comsenz Inc.
+ *      This is NOT a freeware, use is subject to license terms
+ *
+ *      $Id: forumindex.php 27451 2012-02-01 05:48:47Z monkey $
+ */
+
+if(!defined('IN_MOBILE_API')) {
+	exit('Access Denied');
+}
+
+
+
+$query = DB::QUERY('select * from '.DB::table('protal_category'));
+
+$data = array();
+			while($row = DB::fetch($query)) {
+				$data[] = cellapp_core::getvalues($row, array('catid', 'upid', 'catname', 'articles', 'allowcomment', 'displayorder', 'notinheritedarticle', 
+'notinheritedblock', 'domain', 'url', 'uid', 'username', 'dateline', 'closed', 'shownav', 'description', 
+'seotitle', 'keyword', 'primaltplname', 'articleprimaltplname', 
+'disallowpublish', 'foldername', 'notshowarticlesummay', 'perpage', 'maxpages', 'noantitheft', 'lastpublish'));
+			}
+			$variable = array(
+				'data' => $data,
+			);
+//$variable = array(
+//			'forumlist' => array_values(cellapp_core::getvalues($GLOBALS['forumlist'], array('/^\d+$/'), array('fid', 'name', 'threads', 'posts', 'redirect', 'todayposts', 'description',
+//                              'banner','seotitle','keywords','seodescription'))),
+//		);
+cellapp_core::result(cellapp_core::variable($variable));
+?>

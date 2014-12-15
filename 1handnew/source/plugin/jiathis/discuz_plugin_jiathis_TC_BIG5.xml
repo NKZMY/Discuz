@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2010-10-20 08:08]]></item>
+	<item id="From"><![CDATA[Discuz! x2 (http://localhost/discuzx15/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[JiaThis¤À¨É¤u¨ã]]></item>
+			<item id="identifier"><![CDATA[jiathis]]></item>
+			<item id="description"><![CDATA[JiaThis¬O°ê¤º³Ì¤jªºªÀ·|¤Æ¤À¨É«ö¶s¤Î¤u¨ã´£¨Ñ°Ó¡A¤w¸g¦³¶W¹L20ÉE®aÊI¯¸¥¿¦b¨Ï¥ÎJiaThis°ª®ÄÃ­©wªºªA°È¡C
+³q¹LÊI¯¸¥D´O¤JªºJiaThis¤À¨É¤u¨ã¡A¥Î¤á¥i¥H«K±¶ªº±NÊI¯¸¤º®e¤À¨É¨ì¦U¤jªÀ·|¤Æ´CÊ^ÊI¯¸¡A±q¦Ó¬°ÊI¯¸±a¨Ó§ó¦hªºªÀ·|¤Æ¬y¶q¡C
+JiaThis¤ä«ù¦h¹F88­Ó°ê¤º¥~¬y¦æªºªÀ·|¤Æ´CÊ^ÊI¯¸¡A¦}¥B´£¨Ñ¤F±j¤jªº¥Î¤á¦Û©w¸q±µ¤f¡CJiaThis¤£¶È¨ã¦³¥þ­±ªº¼ÆÕu¤ÀªR¥\¯à¡A¦Ó¥BÁÙ·|®ÚÕu¥Î¤á³ß¦n¡A±N¥Î¤á³Ì±`¥ÎªºªÀ·|¤Æ´CÊ^±Æ¦b³Ì«e­±¡C
+JiaThis©x¤èÊI¯¸¡Rhttp://www.jiathis.com¡C]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[jiathis/]]></item>
+			<item id="copyright"><![CDATA[JiaThis Inc.]]></item>
+			<item id="version"><![CDATA[1.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[jiathis]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[jiathis«ö¶s¦ì¸m¡]®a¶é¤é§Ó...¡^]]></item>
+				<item id="description"><![CDATA[<span style="color:#000">½Ð¿ï¾Üjiathis«ö¶s¦b®a¶éÀW¹D¤é§Ó¤º®e­¶¤¤¥X²{ªº¦ì¸m¡C¦¹¿ï¶µ¹ï¡§°¼Äæ¦¡¡¨¤À¨É¥N½XµL®Ä¡C</span>]]></item>
+				<item id="variable"><![CDATA[jiathis_pos_blog]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1 = ¤é§Ó¥¿¤å¤W¤è
+2 = ¤é§Ó¥¿¤å¤U¤è]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[jiathis«ö¶s¦ì¸m¡]¼s³õ©«¤l¡B¸s²Õ¸ÜÃD...¡^]]></item>
+				<item id="description"><![CDATA[<span style="color:#000">½Ð¿ï¾Üjiathis«ö¶s¦b¼s³õ©«¤l¤º®e­¶¡B¸s²Õ¸ÜÃD¤º®e­¶¥X²{ªº¦ì¸m¡C¦¹¿ï¶µ¹ï¡§°¼Äæ¦¡¡¨¤À¨É¥N½XµL®Ä¡C</span>]]></item>
+				<item id="variable"><![CDATA[jiathis_pos_post]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1 = ¥D¶KÀY³¡
+2 = ¥D¶K¥¿¤å¤W¤è
+3 = ¥D¶K¥¿¤å¤U¤è
+4 = ¥D¶K§À³¡]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[jiathis´O¤J¥N½X¡]½Ð±q©xÊIwww.jiathis.comÀò¨ú¡^]]></item>
+				<item id="description"><![CDATA[<span style="color:#000">JiaThis¤À¨É«ö¶s¥D­n¤À¬°¡R°¼Äæ¦¡¡B«ö¶s¦¡¡B¤u¨ã¦¡©M¹Ï¼Ð¦¡¡CÀq»{´O¤Jªº¬O¡§¤u¨ã¦¡¡¨¥N½X¡C<a href="http://www.jiathis.com/" target="_blank"><u style="color:red">¦pªG±z·Q§ó´««ö¶s­·®æ¡A½ÐÂIÀ»³o¨½¨ìJiaThis©xÊIÀò¨ú·s¥N½X</u></a>¡C¦pªG±z»Ý­n¹ïÊI¯¸ªº¤À¨É¼ÆÕu¶i¦æ°lÂÜÉO¤ÀªR¡A¥u»Ý­n¨ìJiaThis§K¶Oª`¥U¦}­«·sÀò¨ú¥N½X´O¤J³o¨½§Y¥i¡C</span>]]></item>
+				<item id="variable"><![CDATA[jiathis_script]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<!-- JiaThis Button BEGIN -->
+<div id="ckepop">
+	<a href="http://www.jiathis.com/share/" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank">¤À¨É¨ì¡R</a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_kaixin001"></a>
+	<a class="jiathis_button_renren"></a>
+</div>
+<script type="text/javascript" src="http://v1.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

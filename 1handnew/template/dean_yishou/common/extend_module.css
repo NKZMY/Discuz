@@ -1,0 +1,44 @@
+/*author by dean模板工作室*/
+/*contactus by qq:1589787930*/
+/*site:www.188yule.com*/
+/*template name is dean_yishou*/
+/*vision 1.0.0*/
+/*develop date is:2013-04-13*/
+/**portal::index**/
+.dbox{}
+	.dboxl{ width:690px; height:380px; float:left; background:#fff; }
+	.dboxr{ width:292px; height:380px; float:right; position:relative; background:#fff url({STYLEIMGDIR}/rank.jpg) 0 0 no-repeat;}
+		.dboxr ul{position:absolute; top:0; right:0; width:230px;}
+			.dboxr li{ height:77px; background:url({STYLEIMGDIR}/lishadow.jpg) bottom right no-repeat; text-indent:12px;}
+				.dboxr li a{ font-size:16px; line-height:77px; color:#333; font-family:微软雅黑; font-weight:400;}
+.box{ margin:0px auto; width:988px; margin-top:25px;}
+	.box h1{ font:23px 微软雅黑 bold; color:#333; border-bottom:1px solid #333; padding-bottom:10px; margin-bottom:10px;}
+		.box h1 span{float:left;}
+		.box h1 a{float:right;} 
+	.box ul{ margin-left:-9px;}
+	.ie6 .box ul{margin-left:-18px;}
+		.box ul li{width:238px; height:272px; background:#fff;  border:1px solid #ddd; box-shadow:2px 2px 3px #9d9d9d; text-align:center; float:left; position:relative; margin-left:9px;}
+		.box ul li:hover img{opacity:0.8; fliter:(alpha(opacity=80)); }
+		.box ul li img{ width:234px; padding:2px;}
+		.box ul li .text{position:absolute; height:50px; line-height:50px; width:234px; bottom:2px; left:2px;}
+			.box ul li .text a{color:#fff; font-size:16px; font-family:微软雅黑;}
+		/*one*/
+		.box1 ul li:hover{border:1px solid #fd5054;}
+		.box1 ul li .text{ background:#fd5054; }
+		/*two*/
+		.box2 ul li:hover{border:1px solid #1eb9bd;}
+		.box2 ul li .text{ background:#1eb9bd; }
+		/*three*/
+		.box3 ul li:hover{border:1px solid #fecc4f;}
+		.box3 ul li .text{ background:#fecc4f; }
+		/*four*/
+		.box4 ul li:hover{border:1px solid #fd7a34;}
+		.box4 ul li .text{ background:#fd7a34; }
+		/*five*/
+		.box5 ul li:hover{border:1px solid #b4121f;}
+		.box5 ul li .text{ background:#b4121f; }
+		/*six*/
+		.box6 ul li:hover{border:1px solid #99c228;}
+		.box6 ul li .text{ background:#99c228; }
+	.footer{margin-top:30px;}
+/**end**/
